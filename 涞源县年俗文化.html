@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>涞源县年俗 - 家乡的年味</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #8B0000; /* 中国红，贴合年俗氛围 */
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700; /* 金黄色 hover 效果 */
+        }
+
+        /* banner 区域 */
+        .banner {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://picsum.photos/id/1036/1920/400') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 20px;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        /* 主要内容区 */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro h2 {
+            font-size: 36px;
+            color: #8B0000;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* 年俗卡片区域 */
+        .customs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .custom-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 200px;
+            background: url('https://picsum.photos/id/1047/600/400') center/cover no-repeat;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            color: #8B0000;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .card-content p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* 不同卡片的图片替换 */
+        .card-img-1 {
+            background-image: url('https://picsum.photos/id/1060/600/400');
+        }
+
+        .card-img-2 {
+            background-image: url('https://picsum.photos/id/1080/600/400');
+        }
+
+        .card-img-3 {
+            background-image: url('https://picsum.photos/id/1082/600/400');
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .banner h1 {
+                font-size: 36px;
+            }
+
+            .banner p {
+                font-size: 18px;
+            }
+
+            .intro h2 {
+                font-size: 28px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+            }
+
+            .nav-links li {
+                margin: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">涞源年俗</div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#intro">年俗介绍</a></li>
+                <li><a href="#customs">特色习俗</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner区域 -->
+    <section class="banner" id="home">
+        <div>
+            <h1>涞源县 · 浓浓年俗 悠悠乡情</h1>
+            <p>涞源地处冀晋交界，其年俗融合了燕赵文化与晋北风情，既有北方过年的热闹红火，又有独具本地特色的民俗传统，承载着涞源人对新年的美好期盼。</p>
+        </div>
+    </section>
+
+    <!-- 主要内容 -->
+    <div class="container">
+        <!-- 年俗简介 -->
+        <section class="intro" id="intro">
+            <h2>涞源年俗概览</h2>
+            <p>涞源县的年俗文化源远流长，从腊月初八的“喝腊八粥”开始，年味便逐渐浓郁。扫尘、贴春联、蒸花馍、守岁、拜年、闹元宵等习俗代代相传，其中“打树花”“祭山神”“九曲黄河灯阵”等更是涞源独有的年俗特色。这些习俗不仅是对传统文化的传承，更是涞源人对美好生活的向往与追求。</p>
+        </section>
+
+        <!-- 特色年俗卡片 -->
+        <section class="customs" id="customs">
+            <div class="custom-card">
+                <div class="card-img card-img-1"></div>
+                <div class="card-content">
+                    <h3>涞源打树花</h3>
+                    <p>作为涞源最具特色的年俗之一，打树花是用熔化的铁水泼洒到古城墙上，迸溅出万朵火花，犹如枝繁叶茂的树冠而得名。春节期间的打树花表演，场面壮观，是涞源人迎接新年的盛大仪式。</p>
+                </div>
+            </div>
+
+            <div class="custom-card">
+                <div class="card-img card-img-2"></div>
+                <div class="card-content">
+                    <h3>九曲黄河灯阵</h3>
+                    <p>元宵节期间，涞源各村镇会摆起九曲黄河灯阵，由365根灯杆组成，象征着一年365天平安顺遂。人们穿梭灯阵，祈福纳祥，是涞源元宵节最热闹的活动之一。</p>
+                </div>
+            </div>
+
+            <div class="custom-card">
+                <div class="card-img card-img-3"></div>
+                <div class="card-content">
+                    <h3>蒸年馍 贴窗花</h3>
+                    <p>腊月二十过后，涞源家家户户开始蒸花馍，造型有枣山、兔子、鱼等，寓意吉祥。大红的窗花也是涞源年俗的亮点，剪纸艺人剪出的花鸟鱼虫、吉祥图案，把农家小院装点得年味十足。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer id="about">
+        <div class="footer-content">
+            <h3>涞源县年俗文化</h3>
+            <p>? 2026 涞源年俗网页 | 传承家乡文化，留住浓浓年味</p>
+        </div>
+    </footer>
+</body>
+</html>
